@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root fx:id="layoutPane" prefHeight="340.0" prefWidth="356.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.MainFrame">
+   <children>
+      <BorderPane layoutY="31.0" prefHeight="400.0" prefWidth="463.0" AnchorPane.topAnchor="31.0" />
+      <MenuBar prefHeight="26.0" prefWidth="463.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <Menu mnemonicParsing="false" text="New">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#MenuItemNewBF" text="bf" />
+                        <MenuItem mnemonicParsing="false" onAction="#MenuItemNewOok" text="Ook" />
+                    </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" onAction="#MenuItemOpen" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#MenuItemSave" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#MenuItemExit" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Run">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#MenuItemExecute" text="Execute" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Version">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="26.0" fitWidth="42.0" layoutX="421.0" onMouseClicked="#TurnOnLogSurface" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../bin/ui/resources/timg.jpg" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="workingspace" layoutY="27.0" onInputMethodTextChanged="#textAreaWorking" prefHeight="194.0" prefWidth="463.0" text="&#10;&#10;       &#10;&#10;&#10;&#10;                                     Code section&#10;                                     Your code goes here..." />
+      <TextArea fx:id="input" layoutY="221.0" onInputMethodTextChanged="#textAreaIn" prefHeight="210.0" prefWidth="233.0" text="&#10;&#10;&#10;&#10;                                     &#10;&#10;                     InputSection" />
+      <TextArea fx:id="output" layoutX="230.0" layoutY="221.0" onInputMethodTextChanged="#textAreaOut" prefHeight="210.0" prefWidth="233.0" text="&#10;&#10;&#10;                                    &#10;&#10;                          &#10;                   OutputSection" />
+   </children>
+</fx:root>
